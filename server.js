@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const { urlencoded } = require("express");
+const homePage = require("./controllers/homePage");
 require("dotenv").config();
 
 const app = express();
@@ -16,6 +17,7 @@ app.use(urlencoded({ extended: true }));
 app.use(cors({ origin: ["http://localhost:3000"] }));
 app.use("/api", require("./routes/auth"));
 app.use("/post", require("./routes/post"));
+app.use("/", homePage);
 
 if (process.env.NODE_ENV === "production") {
 	app.use(express.static("client/.next"));
