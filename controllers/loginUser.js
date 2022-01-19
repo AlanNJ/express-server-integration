@@ -2,6 +2,7 @@ const User = require("../models/user");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const loginUser = async (req, res) => {
+	console.log(req.body);
 	try {
 		console.log(req.body);
 		const { email, password } = req.body;
