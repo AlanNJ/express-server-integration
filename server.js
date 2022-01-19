@@ -20,5 +20,5 @@ app.use("/post", require("./routes/post"));
 if (process.env.NODE_ENV === "production") {
 	app.use(express.static("client/.next"));
 }
-const port = 8080;
+const port = process.env.PORT || 5000;
 app.listen(port, () => console.log("server running on port 8000"));
