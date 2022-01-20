@@ -6,6 +6,8 @@ const updatePost = require("../controllers/updatePost");
 const getSinglePost = require("../controllers/getSinglePost");
 
 const router = express.Router();
+
+//defining our routes for all the CRUD operation on the Post
 router.post("/repo", addRepo);
 router.get("/get-post", getPost);
 router.delete("/delete-post/:id", deletePost);
