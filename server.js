@@ -16,7 +16,7 @@ app.use(express.json({ limit: "5mb" }));
 app.use(urlencoded({ extended: true }));
 app.use(
 	cors({
-		origin: "http://precily-github.herokuapp.com",
+		origin: "https://precily-devtem.netlify.app",
 	})
 );
 app.use("/api", require("./routes/auth"));
